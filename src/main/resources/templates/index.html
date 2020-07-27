@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hello world</h1>
+<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="student : ${list}">
+            <td th:text="${student.name}"></td>
+            <td><img width="200px" height="150px" th:src="@{${student.avatar}}" alt="Error"></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
